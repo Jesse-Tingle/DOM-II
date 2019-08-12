@@ -11,3 +11,15 @@ for (let image of images) {
         image.style.width = '50%';
     })
 }
+
+let allText = document.querySelector('body');
+document.addEventListener('copy', () => {
+    alert('Text was coppied!');
+})
+
+
+// function logCopy(event) {
+//     alert('Text was coppied!')
+// }
+
+// allText.onCopy = logCopy();
