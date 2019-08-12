@@ -1,3 +1,10 @@
+// siteContent = {
+
+//     "audio": {
+//         "sound-url": "audio/sound.mp3"
+//     }
+// };
+
 // Your code goes here
 
 // adds a background-color of yellow to the
@@ -19,7 +26,7 @@ for (let image of images) {
 // alerts a message notifying the user that 
 // the text was coppied to the clipboard
 let allText = document.querySelector('body');
-document.addEventListener('copy', () => {
+allText.addEventListener('copy', () => {
     alert('Text was coppied!');
 })
 
@@ -39,3 +46,18 @@ for(let buttonLeave of buttonsLeave) {
         buttonLeave.style.color = 'white';
     });
 }
+
+// changes the text color back to teal when the mouse pointer
+// goes over the button
+let buttonsHover = document.querySelectorAll('.btn');
+for(let buttonHover of buttonsHover) {
+    buttonHover.addEventListener('pointerover', () => {
+        buttonHover.style.color = '#17A2B8';
+    })
+}
+
+// plays audio when the page finishes loading
+var sound = new Audio('sound.mp3');
+sound.addEventListener('loadeddata', () => {
+    sound.play();
+});
