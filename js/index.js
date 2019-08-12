@@ -1,10 +1,3 @@
-// siteContent = {
-
-//     "audio": {
-//         "sound-url": "audio/sound.mp3"
-//     }
-// };
-
 // Your code goes here
 
 // adds a background-color of yellow to the
