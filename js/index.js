@@ -2,9 +2,9 @@
 
 // adds a background-color of yellow to the
 // h1 tag in the header
-let header = document.querySelector('h1');
-document.addEventListener('mouseover', () => {
-    header.style.backgroundColor = '#FDE45B';
+let header = document.querySelector('.logo-heading');
+header.addEventListener('mouseover', (event) => {
+    event.target.style.backgroundColor = '#FDE45B';
 })
 
 // increases the image size of the two images
