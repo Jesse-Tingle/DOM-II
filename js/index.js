@@ -4,6 +4,20 @@ window.addEventListener('resize', (event) => {
     console.log('Window resized');
 });
 
+// stops nav links from refreshing the page
+let allLinks = document.querySelectorAll('a');
+allLinks.forEach((element) => {
+  element.addEventListener('click', (event) => {
+      event.preventDefault();
+  });
+
+  // add underline to a tags in navbar
+  element.addEventListener('focus', underline);
+  function underline() {
+      this.style.textDecoration = 'underline';
+  }
+});
+
 
 // adds a background-color of yellow to the
 // h1 tag in the header
