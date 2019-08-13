@@ -4,6 +4,29 @@ window.addEventListener('resize', (event) => {
     console.log('Window resized');
 });
 
+let soundPlaying = false;
+
+// plays audio when the page finishes loading
+var sound = new Audio('sound.mp3');
+sound.addEventListener('loadeddata', () => {
+    sound.play();
+    soundPlaying = true;
+});
+
+let body = document.querySelector('body');
+//console.log(body);
+body.addEventListener('click', function removeListener() {
+    if (soundPlaying === true) {
+        sound.pause();
+        soundPlaying = false;
+        body.style.backgroundColor = 'red';
+    } else if (soundPlaying === false) {
+        sound.play();
+        soundPlaying = true;
+        body.style.backgroundColor = 'white';
+    }
+});
+
 // stops nav links from refreshing the page
 let allLinks = document.querySelectorAll('a');
 allLinks.forEach((element) => {
@@ -68,11 +91,7 @@ for(let buttonHover of buttonsHover) {
     });
 };
 
-// plays audio when the page finishes loading
-var sound = new Audio('sound.mp3');
-sound.addEventListener('loadeddata', () => {
-    sound.play();
-});
+
 
 document.addEventListener('keydown', (event) => {
     if(event.key === 'j'){
