@@ -1,5 +1,10 @@
 // Your code goes here
 
+window.addEventListener('resize', (event) => {
+    console.log('Window resized');
+});
+
+
 // adds a background-color of yellow to the
 // h1 tag in the header
 let header = document.querySelector('.logo-heading');
@@ -60,3 +65,10 @@ document.addEventListener('keydown', (event) => {
         alert('The j key was pressed')
     };
 });
+
+let largeBoatImg = document.querySelector('.content-destination img');
+largeBoatImg.addEventListener('dblclick', () => {
+    largeBoatImg.style.width = '50%';
+    largeBoatImg.style.display = 'flex';
+    largeBoatImg.style.margin = '0 auto';
+})
